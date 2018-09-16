@@ -1,3 +1,5 @@
+'use strict'
+
 const axios = require('axios')
 
 const AUTH_URL = 'https://myshows.me/oauth/token'
