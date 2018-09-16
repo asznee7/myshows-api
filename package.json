@@ -1,0 +1,15 @@
+{
+  "name": "myshows-api",
+  "version": "1.0.0",
+  "description": "A simple API for logging into and interacting with MyShows website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./example/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Vytrishko",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
