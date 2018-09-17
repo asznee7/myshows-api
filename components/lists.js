@@ -5,9 +5,11 @@ const EList = require('../resources/EList')
 
 /**
  * Returns a list of shows
- * @param {string} list - A list name
+ * @param {string} list - A list name (optional, default EList.FAVORITES)
  */
-MyShows.prototype.listsShows = async function(list = EList.FAVORITES) {
+MyShows.prototype.listsShows = async function listsShows(
+  list = EList.FAVORITES
+) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,
@@ -33,7 +35,7 @@ MyShows.prototype.listsShows = async function(list = EList.FAVORITES) {
  * Adds a show to favorites list, returns true if adding was successful
  * @param {int} id - Show id
  */
-MyShows.prototype.listsAddShow = async function(id) {
+MyShows.prototype.listsAddShow = async function listsAddShow(id) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,
@@ -60,7 +62,7 @@ MyShows.prototype.listsAddShow = async function(id) {
  * Removes a show from favorites list, returns true if removing was successful
  * @param {int} id - Episode id
  */
-MyShows.prototype.listsRemoveShow = async function(id) {
+MyShows.prototype.listsRemoveShow = async function listsRemoveShow(id) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,
@@ -85,9 +87,11 @@ MyShows.prototype.listsRemoveShow = async function(id) {
 
 /**
  * Returns a list of episodes
- * @param {string} list - A list name (favorites, ignored, unwatched, next)
+ * @param {string} list - A list name, any of EList enum (optional, default EList.FAVORITES)
  */
-MyShows.prototype.listsEpisodes = async function(list = EList.FAVORITES) {
+MyShows.prototype.listsEpisodes = async function listsEpisodes(
+  list = EList.FAVORITES
+) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,
@@ -112,9 +116,9 @@ MyShows.prototype.listsEpisodes = async function(list = EList.FAVORITES) {
 /**
  * Adds an episode to a list, returns true if adding was successful
  * @param {int} id - Episode id
- * @param {string} list - A list name (favorites, ignored)
+ * @param {string} list - A list name (can be EList.FAVORITES or EList.IGNORED)
  */
-MyShows.prototype.listsAddEpisode = async function(id, list) {
+MyShows.prototype.listsAddEpisode = async function listsAddEpisode(id, list) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,
@@ -140,9 +144,12 @@ MyShows.prototype.listsAddEpisode = async function(id, list) {
 /**
  * Removes an episode from a list, returns true if removing was successful
  * @param {int} id - Episode id
- * @param {string} list - A list name (favorites, ignored)
+ * @param {string} list - A list name (can be EList.FAVORITES or EList.IGNORED)
  */
-MyShows.prototype.listsRemoveEpisode = async function(id, list) {
+MyShows.prototype.listsRemoveEpisode = async function listsRemoveEpisode(
+  id,
+  list
+) {
   try {
     const response = await this.axios.post('', {
       ...this.defaultParams,

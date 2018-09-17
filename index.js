@@ -65,3 +65,4 @@ class MyShows {
 module.exports = MyShows
 
 require('./components/lists')
+require('./components/users')
