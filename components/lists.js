@@ -1,14 +1,13 @@
 'use strict'
 
 const MyShows = require('../index.js')
-const EList = require('../resources/EList')
 
 /**
- * Returns a list of shows
- * @param {string} list - A list name (optional, default EList.FAVORITES)
+ * Returns a list of shows (requires authentication).
+ * @param {string} [list=MyShows.EList.FAVORITES] - A list name.
  */
 MyShows.prototype.listsShows = async function listsShows(
-  list = EList.FAVORITES
+  list = MyShows.EList.FAVORITES
 ) {
   try {
     const response = await this.axios.post('', {
@@ -32,7 +31,8 @@ MyShows.prototype.listsShows = async function listsShows(
 }
 
 /**
- * Adds a show to favorites list, returns true if adding was successful
+ * Adds a show to favorites list, returns true
+ * if adding was successful (requires authentication).
  * @param {int} id - Show id
  */
 MyShows.prototype.listsAddShow = async function listsAddShow(id) {
@@ -42,7 +42,7 @@ MyShows.prototype.listsAddShow = async function listsAddShow(id) {
       method: 'lists.AddShow',
       params: {
         id,
-        list: EList.FAVORITES,
+        list: MyShows.EList.FAVORITES,
       },
     })
 
@@ -59,8 +59,9 @@ MyShows.prototype.listsAddShow = async function listsAddShow(id) {
 }
 
 /**
- * Removes a show from favorites list, returns true if removing was successful
- * @param {int} id - Episode id
+ * Removes a show from favorites list, returns true
+ * if removing was successful (requires authentication).
+ * @param {int} id - Episode id.
  */
 MyShows.prototype.listsRemoveShow = async function listsRemoveShow(id) {
   try {
@@ -69,7 +70,7 @@ MyShows.prototype.listsRemoveShow = async function listsRemoveShow(id) {
       method: 'lists.RemoveShow',
       params: {
         id,
-        list: EList.FAVORITES,
+        list: MyShows.EList.FAVORITES,
       },
     })
 
@@ -86,11 +87,11 @@ MyShows.prototype.listsRemoveShow = async function listsRemoveShow(id) {
 }
 
 /**
- * Returns a list of episodes
- * @param {string} list - A list name, any of EList enum (optional, default EList.FAVORITES)
+ * Returns a list of episodes (requires authentication).
+ * @param {string} [list=MyShows.EList.FAVORITES] - A list name, any of MyShows.EList enum.
  */
 MyShows.prototype.listsEpisodes = async function listsEpisodes(
-  list = EList.FAVORITES
+  list = MyShows.EList.FAVORITES
 ) {
   try {
     const response = await this.axios.post('', {
@@ -114,9 +115,9 @@ MyShows.prototype.listsEpisodes = async function listsEpisodes(
 }
 
 /**
- * Adds an episode to a list, returns true if adding was successful
- * @param {int} id - Episode id
- * @param {string} list - A list name (can be EList.FAVORITES or EList.IGNORED)
+ * Adds an episode to a list, returns true if adding was successful (requires authentication).
+ * @param {int} id - Episode id.
+ * @param {string} list - A list name (can be MyShows.EList.FAVORITES or MyShows.EList.IGNORED).
  */
 MyShows.prototype.listsAddEpisode = async function listsAddEpisode(id, list) {
   try {
@@ -142,9 +143,9 @@ MyShows.prototype.listsAddEpisode = async function listsAddEpisode(id, list) {
 }
 
 /**
- * Removes an episode from a list, returns true if removing was successful
- * @param {int} id - Episode id
- * @param {string} list - A list name (can be EList.FAVORITES or EList.IGNORED)
+ * Removes an episode from a list, returns true if removing was successful (requires authentication).
+ * @param {int} id - Episode id.
+ * @param {string} list - A list name (can be MyShows.EList.FAVORITES or MyShows.EList.IGNORED).
  */
 MyShows.prototype.listsRemoveEpisode = async function listsRemoveEpisode(
   id,

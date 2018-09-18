@@ -2,6 +2,10 @@
 
 const axios = require('axios')
 
+const EList = require('./resources/EList')
+const EGender = require('./resources/EGender')
+const ESpentTime = require('./resources/ESpentTime')
+
 const AUTH_URL = 'https://myshows.me/oauth/token'
 const BASE_URL = 'https://api.myshows.me/v2/rpc/'
 const DEFAULT_PARAMS = {
@@ -61,6 +65,10 @@ class MyShows {
     }
   }
 }
+
+MyShows.EList = EList
+MyShows.EGender = EGender
+MyShows.ESpentTime = ESpentTime
 
 module.exports = MyShows
 

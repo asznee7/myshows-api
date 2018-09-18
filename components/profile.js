@@ -3,7 +3,7 @@
 const MyShows = require('../index.js')
 
 /**
- * Returns user profile. (Requires authentication only if login param omited)
+ * Returns user profile (requires authentication only if login param omited).
  * @param {string} [login] - User name. If omited method returns data for the current user.
  */
 MyShows.prototype.profileGet = async function profileGet(login) {
@@ -29,7 +29,7 @@ MyShows.prototype.profileGet = async function profileGet(login) {
 }
 
 /**
- * Returns user public feed. (Requires authentication only if login param omited)
+ * Returns user public feed (requires authentication only if login param omited).
  * @param {string} [login] - User name. If omited method returns data for the current user.
  */
 MyShows.prototype.profileFeed = async function profileFeed(login) {
@@ -55,7 +55,7 @@ MyShows.prototype.profileFeed = async function profileFeed(login) {
 }
 
 /**
- * Returns user's friend list. (Requires authentication only if login param omited)
+ * Returns user's friend list (requires authentication only if login param omited).
  * @param {string} [login] - User name. If omited method returns data for the current user.
  */
 MyShows.prototype.profileFriends = async function profileFriends(login) {
@@ -81,7 +81,7 @@ MyShows.prototype.profileFriends = async function profileFriends(login) {
 }
 
 /**
- * Returns user's followers. (Requires authentication only if login param omited)
+ * Returns user's followers (requires authentication only if login param omited).
  * @param {string} [login] - User name. If omited method returns data for the current user.
  */
 MyShows.prototype.profileFollowers = async function profileFollowers(login) {
@@ -107,7 +107,7 @@ MyShows.prototype.profileFollowers = async function profileFollowers(login) {
 }
 
 /**
- * Returns friends feed for the current user. (Requires authentication)
+ * Returns friends feed for the current user (requires authentication).
  */
 MyShows.prototype.profileFriendsFeed = async function profileFriendsFeed() {
   try {
@@ -129,7 +129,7 @@ MyShows.prototype.profileFriendsFeed = async function profileFriendsFeed() {
 }
 
 /**
- * Returns user's shows. (Requires authentication only if login param omited)
+ * Returns user's shows (requires authentication only if login param omited).
  * @param {string} [login] - User name. If omited method returns data for the current user.
  */
 MyShows.prototype.profileShows = async function profileShows(login) {
@@ -155,7 +155,7 @@ MyShows.prototype.profileShows = async function profileShows(login) {
 }
 
 /**
- * Returns show episodes for the current user. (Requires authentication)
+ * Returns show episodes for the current user (requires authentication).
  * @param {int} showId - ID of the show.
  */
 MyShows.prototype.profileEpisodes = async function profileEpisodes(showId) {
@@ -181,7 +181,7 @@ MyShows.prototype.profileEpisodes = async function profileEpisodes(showId) {
 }
 
 /**
- * Returns list of achievements for the current user. (Requires authentication)
+ * Returns list of achievements for the current user (requires authentication).
  */
 MyShows.prototype.profileAchievements = async function profileAchievements() {
   try {
@@ -203,7 +203,7 @@ MyShows.prototype.profileAchievements = async function profileAchievements() {
 }
 
 /**
- * Returns list of achievements for the current user. (Requires authentication)
+ * Returns list of achievements for the current user (requires authentication).
  */
 MyShows.prototype.profileNewComments = async function profileNewComments() {
   try {
