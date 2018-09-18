@@ -66,3 +66,4 @@ module.exports = MyShows
 
 require('./components/lists')
 require('./components/users')
+require('./components/profile')
