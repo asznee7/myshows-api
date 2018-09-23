@@ -7,6 +7,7 @@ const EGender = require('./resources/EGender')
 const ESpentTime = require('./resources/ESpentTime')
 const EShowSourses = require('./resources/EShowSources')
 const EGenderVote = require('./resources/EGenderVote')
+const EShowStatus = require('./resources/EShowStatus')
 
 const AUTH_URL = 'https://myshows.me/oauth/token'
 const BASE_URL = 'https://api.myshows.me/v2/rpc/'
@@ -73,6 +74,7 @@ MyShows.EGender = EGender
 MyShows.ESpentTime = ESpentTime
 MyShows.EShowSourses = EShowSourses
 MyShows.EGenderVote = EGenderVote
+MyShows.EShowStatus = EShowStatus
 
 module.exports = MyShows
 
@@ -80,3 +82,4 @@ require('./components/lists')
 require('./components/users')
 require('./components/profile')
 require('./components/shows')
+require('./components/manage')

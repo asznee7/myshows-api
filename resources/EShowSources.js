@@ -1,5 +1,5 @@
 /**
- * @enum EShowSourses
+ * @enum EShowSources
  */
 module.exports = {
   TVRAGE: 'tvrage',
