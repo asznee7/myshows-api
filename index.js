@@ -5,6 +5,8 @@ const axios = require('axios')
 const EList = require('./resources/EList')
 const EGender = require('./resources/EGender')
 const ESpentTime = require('./resources/ESpentTime')
+const EShowSourses = require('./resources/EShowSources')
+const EGenderVote = require('./resources/EGenderVote')
 
 const AUTH_URL = 'https://myshows.me/oauth/token'
 const BASE_URL = 'https://api.myshows.me/v2/rpc/'
@@ -69,9 +71,12 @@ class MyShows {
 MyShows.EList = EList
 MyShows.EGender = EGender
 MyShows.ESpentTime = ESpentTime
+MyShows.EShowSourses = EShowSourses
+MyShows.EGenderVote = EGenderVote
 
 module.exports = MyShows
 
 require('./components/lists')
 require('./components/users')
 require('./components/profile')
+require('./components/shows')
